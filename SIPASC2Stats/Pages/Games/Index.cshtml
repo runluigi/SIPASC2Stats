@@ -1,0 +1,93 @@
+﻿@page
+@model SIPASC2Stats.Pages.Games.IndexModel
+@{
+    ViewData["Title"] = "Replays";
+}
+<h2>Replays</h2>
+<hr />
+
+<h3>Upload Replays</h3>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="FileUpload.BattleNetID" class="control-label"></label>
+                <input asp-for="FileUpload.BattleNetID" type="text" class="form-control" />
+                <span asp-validation-for="FileUpload.BattleNetID" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FileUpload.Event_ID" class="control-label"></label>
+                <input asp-for="FileUpload.Event_ID" type="text" class="form-control" />
+                <span asp-validation-for="FileUpload.Event_ID" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FileUpload.Win" class="control-label"></label>
+                <input type="checkbox" asp-for="FileUpload.Win" />
+
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FileUpload.Map" class="control-label"></label>
+                <input asp-for="FileUpload.Map" type="text" class="form-control" />
+                <span asp-validation-for="FileUpload.Map" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="FileUpload.ReplayFile" class="control-label"></label>
+                <input asp-for="FileUpload.ReplayFile" type="file" class="form-control" style="height:auto" />
+                <span asp-validation-for="FileUpload.ReplayFile" class="text-danger"></span>
+            </div>
+            <input type="submit" value="Upload" class="btn btn-default" />
+        </form>
+    </div>
+</div>
+
+<h3>Loaded Replays</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.SIPASC2Game[0].ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SIPASC2Game[0].BattleNetID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SIPASC2Game[0].UploadDT)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.SIPASC2Game[0].ReplayFileSize)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.SIPASC2Game)
+        {
+        <tr>
+            <td>
+                <a asp-page="./Delete" asp-route-id="@item.BattleNetID">Delete</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BattleNetID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UploadDT)
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.ReplayFileSize)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPASC2Stats", "SIPASC2Stats\SIPASC2Stats.csproj", "{A3542FF5-A23F-409A-A21D-7AAE49F48536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationTest3", "WebApplicationTest3\WebApplicationTest3.csproj", "{4A8DFEE1-A780-4F23-9EBA-873D05C758B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3542FF5-A23F-409A-A21D-7AAE49F48536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3542FF5-A23F-409A-A21D-7AAE49F48536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3542FF5-A23F-409A-A21D-7AAE49F48536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3542FF5-A23F-409A-A21D-7AAE49F48536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8DFEE1-A780-4F23-9EBA-873D05C758B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8DFEE1-A780-4F23-9EBA-873D05C758B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8DFEE1-A780-4F23-9EBA-873D05C758B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8DFEE1-A780-4F23-9EBA-873D05C758B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B1B966B-C458-4B19-BF1F-1C718260C110}
+	EndGlobalSection
+EndGlobal
